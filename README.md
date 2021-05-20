@@ -66,4 +66,4 @@ $ ansible-playbook -i hosts apache.yml
 
 ## Results
 
-Access the IP address of the Remote Host server in Brower and you can see the sample website.
+Access the IP address of the Remote Host server in Browser and you can see the sample website.
