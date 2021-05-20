@@ -1,0 +1,31 @@
+---
+- name: "Hosting a Website in Apache"
+  become: true
+  hosts: ubuntu
+  tasks:  
+
+  - name: "Install Apache"
+    yum:
+      name: httpd
+      state: present
+
+  - name: "Download and Unzip the website file"
+    unarchive:
+      src: https://www.tooplate.com/zip-templates/2111_pro_line.zip
+      dest: /root
+      remote_src: yes
+
+
+  - name: "Copy files to apache document root"       
+    copy:
+      src: /root/2111_pro_line/
+      dest: /var/www/html/
+      owner: apache
+      group: apache
+      remote_src: yes
+  
+  - name: "Restart Apache"
+    service:
+      name: httpd
+      state: restarted
+      enabled: true    
