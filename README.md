@@ -2,7 +2,7 @@
 
 This Ansible Script will helps to Install Apache and Host a Simple Website. Ansible is an open source IT Configuration Management, Deployment & Orchestration tool. It aims to provide large productivity gains to a wide variety of automation challenges.
 
-## Features of Terraform
+## Features of Ansible
 
 - Infrastructure Provisioning
 - Configuration Management
